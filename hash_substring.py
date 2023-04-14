@@ -5,13 +5,13 @@ def read_input():
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
     text = input()
     if "F" in text:
-        filename = input()
-        if "a" not in filename:
-            path = "./tests/" + filename
-            with open(path, "r") as file:
-                pattern = file.readline().rstrip()
-                text = file.readline().rstrip()
-                return (pattern, text)
+        #filename = input()
+        #if "a" not in filename:
+        path = "./tests/" + "06"#filename
+        with open(path, "r") as file:
+            pattern = file.readline().rstrip()
+            text = file.readline().rstrip()
+            return (pattern, text)
     if "I" in text:
         pattern = input().rstrip()
         text = input().rstrip()
@@ -68,6 +68,5 @@ def get_occurrences(pattern, text):
 
 # this part launches the functions
 if __name__ == '__main__':
-    input_data = read_input()
-    print_occurrences(get_occurrences(*input_data))
+    print_occurrences(get_occurrences(*read_input()))
 
