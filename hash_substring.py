@@ -5,15 +5,13 @@ def read_input():
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
     text = input()
     if "F" in text:
-        print("pirms")
         filename = input()
-        print("pec")
-        #if "a" not in filename:
-        path = "./tests/" + filename
-        with open(path, "r") as file:
-            pattern = file.readline().rstrip()
-            text = file.readline().rstrip()
-            return (pattern, text)
+        if "a" not in filename:
+            path = "./tests/" + filename
+            with open(path, "r") as file:
+                pattern = file.readline().rstrip()
+                text = file.readline().rstrip()
+                return (pattern, text)
     if "I" in text:
         pattern = input().rstrip()
         text = input().rstrip()
