@@ -8,12 +8,12 @@ def read_input():
         print("pirms")
         filename = input()
         print("pec")
-        if "a" not in filename:
-            path = "./tests/" + filename
-            with open(path, "r") as file:
-                pattern = file.readline().rstrip()
-                text = file.readline().rstrip()
-                return (pattern, text)
+        #if "a" not in filename:
+        path = "./tests/" + filename
+        with open(path, "r") as file:
+            pattern = file.readline().rstrip()
+            text = file.readline().rstrip()
+            return (pattern, text)
     if "I" in text:
         pattern = input().rstrip()
         text = input().rstrip()
